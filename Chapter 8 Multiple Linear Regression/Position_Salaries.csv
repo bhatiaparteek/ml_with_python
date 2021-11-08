@@ -1,0 +1,11 @@
+Position,Level,Salary
+Teaching Assistants,1,45000
+Guest Faculty,2,50000
+Contractual Faculty,3,60000
+Assistant Professor,4,80000
+Associate Professor,5,110000
+Professor,6,150000
+Associate Dean,7,200000
+Dean,8,300000
+Vice Chancellor,9,500000
+Chancellor,10,1000000
