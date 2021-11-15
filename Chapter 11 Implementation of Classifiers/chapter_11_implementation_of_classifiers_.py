@@ -432,3 +432,165 @@ Visualizer(X_train, y_train)
 
 #Visualizing the Test set results
 Visualizer(X_test, y_test)
+
+"""# Classifier – VI (SVM Linear)
+
+6.1: Importing the Libraries
+"""
+
+#Importing the Libraries
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+"""6.2: Importing the Dataset"""
+
+#Importing the Dataset
+Dataset =  pd.read_csv(PATH) 
+X = Dataset.iloc[:, [2, 3]].values
+y = Dataset.iloc[:, 4].values
+
+"""6.3: Splitting the dataset into the Training set and Test set """
+
+#Splitting the dataset into the Training set and Test set 
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
+
+"""6.4: Feature Scaling """
+
+#Feature Scaling 
+from sklearn.preprocessing import StandardScaler
+scale_X = StandardScaler()
+X_train = scale_X.fit_transform(X_train)
+X_test = scale_X.transform(X_test)
+
+"""6.5: Fitting SVM (Linear) to the Training set """
+
+# Classifier –  VI (SVM - Linear)
+# Fitting SVM to the Training set 
+from sklearn.svm import SVC
+classifier = SVC( kernel =  'linear', random_state = 0)
+classifier.fit(X_train, y_train)
+
+"""6.6: Predicting the Test set results"""
+
+# Predicting the Test set results
+Y_pred = classifier.predict(X_test)
+
+"""6.7: Making the confusion matrix
+
+"""
+
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+
+"""6.8: Performance metrics"""
+
+#Performance metrics
+# Accuracy
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(y_test, y_pred)
+print('Accuracy is %f'% accuracy)
+	 
+# Precision
+from sklearn.metrics import precision_score
+precision = precision_score(y_test, y_pred)
+print('Precision is %f' % precision)
+ 
+# Recall
+from sklearn.metrics import recall_score
+recall = recall_score(y_test, y_pred)
+print('Recall is %f' % recall)
+
+"""6.9: Visualizing the Training set results
+
+"""
+
+#Visualizing the Training set results
+Visualizer(X_train, y_train)
+
+"""6.10: Visualizing the Test set results"""
+
+#Visualizing the Test set results
+Visualizer(X_test, y_test)
+
+"""# Classifier – VII (SVM Non-Linear)
+
+7.1: Importing the Libraries
+"""
+
+#Importing the Libraries
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+"""7.2: Importing the Dataset"""
+
+#Importing the Dataset
+Dataset =  pd.read_csv(PATH) 
+X = Dataset.iloc[:, [2, 3]].values
+y = Dataset.iloc[:, 4].values
+
+"""7.3: Splitting the dataset into the Training set and Test set """
+
+#Splitting the dataset into the Training set and Test set 
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
+
+"""7.4: Feature Scaling """
+
+#Feature Scaling 
+from sklearn.preprocessing import StandardScaler
+scale_X = StandardScaler()
+X_train = scale_X.fit_transform(X_train)
+X_test = scale_X.transform(X_test)
+
+"""7.5: Fitting SVM (Non - Linear) to the Training set """
+
+# Classifier – VII (Non-Linear SVM)
+# Fitting Non-Linear SVM to the Training set 
+from sklearn.svm import SVC
+classifier = SVC (kernel =  'rbf', random_state = 0)
+classifier.fit(X_train, y_train)
+
+"""7.6: Predicting the Test set results"""
+
+# Predicting the Test set results
+Y_pred = classifier.predict(X_test)
+
+"""7.7: Making the confusion matrix
+
+"""
+
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+
+"""7.8: Performance metrics"""
+
+#Performance metrics
+# Accuracy
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(y_test, y_pred)
+print('Accuracy is %f'% accuracy)
+	 
+# Precision
+from sklearn.metrics import precision_score
+precision = precision_score(y_test, y_pred)
+print('Precision is %f' % precision)
+ 
+# Recall
+from sklearn.metrics import recall_score
+recall = recall_score(y_test, y_pred)
+print('Recall is %f' % recall)
+
+"""7.9: Visualizing the Training set results
+
+"""
+
+#Visualizing the Training set results
+Visualizer(X_train, y_train)
+
+"""7.10: Visualizing the Test set results"""
+
+#Visualizing the Test set results
+Visualizer(X_test, y_test)
