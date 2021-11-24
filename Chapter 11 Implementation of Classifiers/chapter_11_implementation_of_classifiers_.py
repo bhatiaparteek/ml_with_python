@@ -80,7 +80,7 @@ print('Recall is %f' % recall)
 # Function definition for visualization of results
 def Visualizer(argument1, arguement2):
   from matplotlib.colors import ListedColormap
-  X_set, y_set = X_test, y_test
+  X_set, y_set = argument1, arguement2
   X1, X2 = np.meshgrid(np.arange(start=X_set[:,0].min()-1, stop        
   =X_set[:,0].max()+1, step=0.01), 
   np.arange(start=X_set[:, 1].min() - 1, stop = 
@@ -113,6 +113,10 @@ Visualizer(X_test, y_test)
 
 2.1: Importing the Libraries
 """
+
+
+
+
 
 #Importing the Libraries
 import numpy as np
@@ -151,7 +155,7 @@ classifier.fit(X_train, y_train)
 """2.6: Predicting the Test set results"""
 
 # Predicting the Test set results
-Y_pred = classifier.predict(X_test)
+y_pred = classifier.predict(X_test)
 
 """2.7: Making the confusion matrix
 
@@ -189,6 +193,13 @@ Visualizer(X_train, y_train)
 
 #Visualizing the Test set results
 Visualizer(X_test, y_test)
+
+
+
+
+
+
+
 
 """# Classifier – III (Naïve Bayes Classifier)
 
@@ -232,7 +243,7 @@ classifier.fit(X_train, y_train)
 """3.6: Predicting the Test set results"""
 
 # Predicting the Test set results
-Y_pred = classifier.predict(X_test)
+y_pred = classifier.predict(X_test)
 
 """3.7: Making the confusion matrix
 
@@ -270,6 +281,18 @@ Visualizer(X_train, y_train)
 
 #Visualizing the Test set results
 Visualizer(X_test, y_test)
+
+
+
+
+
+
+
+
+
+
+
+
 
 """# Classifier – IV (K-Nearest Neighbors)
 
@@ -313,7 +336,7 @@ classifier.fit(X_train, y_train)
 """2.6: Predicting the Test set results"""
 
 # Predicting the Test set results
-Y_pred = classifier.predict(X_test)
+y_pred = classifier.predict(X_test)
 
 """4.7: Making the confusion matrix
 
@@ -351,6 +374,9 @@ Visualizer(X_train, y_train)
 
 #Visualizing the Test set results
 Visualizer(X_test, y_test)
+
+
+
 
 """# Classifier – V (Logistic Regression)
 
@@ -394,7 +420,7 @@ classifier.fit(X_train, y_train)
 """5.6: Predicting the Test set results"""
 
 # Predicting the Test set results
-Y_pred = classifier.predict(X_test)
+y_pred = classifier.predict(X_test)
 
 """5.7: Making the confusion matrix
 
@@ -432,6 +458,15 @@ Visualizer(X_train, y_train)
 
 #Visualizing the Test set results
 Visualizer(X_test, y_test)
+
+
+
+
+
+
+
+
+
 
 """# Classifier – VI (SVM Linear)
 
