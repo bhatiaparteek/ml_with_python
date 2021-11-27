@@ -33,9 +33,6 @@ ct = ColumnTransformer([("Geography", OneHotEncoder(), [3])], remainder = 'passt
 X = ct.fit_transform(X)
 
 
-labelEncoder_Y = LabelEncoder()
-Y = labelEncoder_Y.fit_transform(Y)
-
 """5. Avoiding the Dummy Variable Trap"""
 
 # Avoiding the Dummy Variable Trap
