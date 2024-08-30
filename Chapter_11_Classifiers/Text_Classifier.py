@@ -27,7 +27,7 @@ x=dataset.iloc[0:100,0].values
 y=dataset.iloc[0:100,1].values
 
 
-#processing of all reviews in for loop
+#processing of first 100 reviews in for loop
 for character in range(0, len(x)):
     """
     processing of all reviews in for loop removing any special
